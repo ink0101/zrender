@@ -13594,7 +13594,7 @@ yeoman-generator@^3.1.1:
     through2 "^3.0.0"
     yeoman-environment "^2.0.5"
 
-zrender@4.0.5:
+zrender@4.0.5, zrender@^4.0.5:
   version "4.0.5"
   resolved "http://registry.npm.taobao.org/zrender/download/zrender-4.0.5.tgz#6e8f738971ce2cd624aac82b2156729b1c0e5a82"
   integrity sha1-bo9ziXHOLNYkqsgrIVZymxwOWoI=

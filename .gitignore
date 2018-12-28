@@ -3,3 +3,4 @@
 /dist/
 /src/pages/.umi/
 /src/pages/.umi-production/
+yarn-error.log

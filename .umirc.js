@@ -8,7 +8,7 @@ export default {
       antd: true,
       singular: true,
       title: {
-        defaultTitle: '指标库'
+        defaultTitle: 'Zrender Demo'
       }
     }]
   ],

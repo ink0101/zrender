@@ -44,7 +44,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "umi": "^2.2.7",
-    "umi-plugin-dva": "^1.2.1"
+    "umi-plugin-dva": "^1.2.1",
+    "zrender": "^4.0.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
