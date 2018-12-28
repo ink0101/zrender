@@ -1,0 +1,64 @@
+{
+  "name": "zrender",
+  "version": "1.0.0",
+  "description": "zrender demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "lint": "eslint --ext .js src test",
+    "precommit": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,jsx}": [
+        "eslint",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "src/assets/*",
+      "src/pages/.umi/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ink0101/zrender.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ink0101/zrender/issues"
+  },
+  "homepage": "https://github.com/ink0101/zrender#readme",
+  "dependencies": {
+    "dva": "^2.4.1",
+    "echarts": "^4.2.0-rc.2",
+    "echarts-for-react": "^2.0.15-beta.0",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "umi": "^2.2.7",
+    "umi-plugin-dva": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-alloy": "^1.4.2",
+    "eslint-config-umi": "^1.2.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.4",
+    "lint-staged": "^8.0.5",
+    "umi-plugin-react": "^1.2.3"
+  }
+}

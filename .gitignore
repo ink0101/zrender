@@ -1,0 +1,6 @@
+/node_modules/
+.DS_Store
+/dist/
+/src/pages/.umi/
+/src/pages/.umi-production/
+.umirc.js
