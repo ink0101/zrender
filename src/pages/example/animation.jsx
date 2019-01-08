@@ -3,12 +3,6 @@ import React, { Component } from 'react';
 import zrender from 'zrender';
 import { Button } from 'antd';
 
-const style = {
-  width: '100%',
-  height: '400px',
-  backgroundColor: '#fff',
-};
-
 class animation extends Component {
   state = {
     animation: null,
@@ -78,7 +72,7 @@ class animation extends Component {
           <Button onClick={this.resumeAnimation}>恢复</Button>
         </div>
 
-        <div ref={(dom) => { this.refDom = dom }} style={style} ></div>
+        <div ref={(dom) => { this.refDom = dom }} className="container" ></div>
       </div>
     );
   }

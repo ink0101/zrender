@@ -16,6 +16,9 @@ class Index extends Component {
           <li>
             <Link to="/example/animation">官方示例 - 动画</Link>
           </li>
+          <li>
+            <Link to="/example/boundingBox">官方示例 - 包围盒</Link>
+          </li>
         </ul>
 
         <div>

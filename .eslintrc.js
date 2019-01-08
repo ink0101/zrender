@@ -44,5 +44,6 @@ module.exports = {
     'no-undefined': [1],
     // 无法为代码确定适当的复杂性限制，则最好禁用此规则。
     'complexity': 'off',
+    'no-loop-func': 'off',
   }
 }
