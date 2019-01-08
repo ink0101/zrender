@@ -8,7 +8,13 @@ class Index extends Component {
       <div>
         <ul>
           <li>
-            <Link to="/demo1">demo1</Link>
+            <Link to="/demo/displayable">可显示的元素</Link>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <Link to="/example/animation">官方实例 - 动画</Link>
           </li>
         </ul>
 
@@ -19,9 +25,5 @@ class Index extends Component {
     );
   }
 }
-
-Index.propTypes = {
-
-};
 
 export default Index;

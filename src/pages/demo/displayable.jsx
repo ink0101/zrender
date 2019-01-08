@@ -14,7 +14,7 @@ const stroke = '#999';
 
 const arr = [...Array(11)];
 
-class demo1 extends Component {
+class displayable extends Component {
   componentDidMount() {
     this.initZr1();
     this.initZr2();
@@ -414,7 +414,7 @@ class demo1 extends Component {
   render() {
     return (
       <div>
-        <p>demo1</p>
+        <p>zrender.Displayable，可显示的元素，继承自 zrender.Element。</p>
 
         <div>
           {arr.map((item, index) =>
@@ -427,4 +427,4 @@ class demo1 extends Component {
   }
 }
 
-export default demo1;
+export default displayable;

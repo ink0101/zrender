@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
-class index extends Component {
+class animation extends Component {
   render() {
     return (
-      <div></div>
+      <div>
+        animation
+      </div>
     );
   }
 }
 
-index.propTypes = {
-
-};
-
-export default index;
+export default animation;
