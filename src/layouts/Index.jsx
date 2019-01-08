@@ -19,6 +19,9 @@ class Index extends Component {
           <li>
             <Link to="/example/boundingBox">官方示例 - 包围盒</Link>
           </li>
+          <li>
+            <Link to="/example/clipPath">官方示例 - 剪裁路径</Link>
+          </li>
         </ul>
 
         <div>
