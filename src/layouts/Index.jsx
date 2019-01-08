@@ -22,6 +22,9 @@ class Index extends Component {
           <li>
             <Link to="/example/clipPath">官方示例 - 剪裁路径</Link>
           </li>
+          <li>
+            <Link to="/example/glitchedText">官方示例 - 故障效果文字</Link>
+          </li>
         </ul>
 
         <div>
