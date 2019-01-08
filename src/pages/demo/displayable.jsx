@@ -7,7 +7,7 @@ const style = {
   height: '200px',
   width: '200px',
   display: 'inline-block',
-  backgroundColor: '#f1f1f1',
+  backgroundColor: '#fff',
   marginLeft: '16px',
 };
 const stroke = '#999';

@@ -5,7 +5,7 @@ import Link from 'umi/link';
 class Index extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <ul>
           <li>
             <Link to="/demo/displayable">可显示的元素</Link>
@@ -14,7 +14,7 @@ class Index extends Component {
 
         <ul>
           <li>
-            <Link to="/example/animation">官方实例 - 动画</Link>
+            <Link to="/example/animation">官方示例 - 动画</Link>
           </li>
         </ul>
 
