@@ -8,24 +8,49 @@ const style = {
   width: '200px',
   display: 'inline-block',
   backgroundColor: '#fff',
-  marginLeft: '16px',
+  marginLeft: '8px',
+  // marginBottom: '16px',
 };
 const stroke = '#999';
 
-const arr = [...Array(11)];
+const arr = [...Array(20)];
 
 class displayable extends Component {
   componentDidMount() {
-    this.initZr1();
-    this.initZr2();
-    this.initZr3();
-    this.initZr4();
-    this.initZr5();
-    this.initZr6();
-    this.initZr7();
-    this.initZr8();
-    this.initZr9();
-    this.initZr10();
+    // 圆
+    this.initCirle();
+    // 圆弧
+    this.initArc();
+    // 贝塞尔曲线
+    this.initBezierCurve();
+    // 水滴
+    this.initDroplet();
+    // 椭圆
+    this.initEllipse();
+    // 心形
+    this.initHeart();
+    // 图片
+    this.initImage();
+    // 正多边形
+    this.initIsogon();
+    // 线条
+    this.initLine();
+    // 多边形
+    this.initPolygon();
+    // 多边形折线段
+    this.initPolyline();
+    // 矩形
+    this.initRect();
+    // 玫瑰线
+    this.initRose();
+    // 扇形
+    this.initSector();
+    // 星星
+    this.initStar();
+    // 文字
+    this.initText();
+    // 内外涡轮曲线
+    this.initTrochoid();
   }
   initZr = (dom, options) => {
     const zr = zrender.init(dom);
@@ -38,7 +63,7 @@ class displayable extends Component {
       zr.add(canvas);
     }
   }
-  initZr1 = () => {
+  initCirle = () => {
     const options = [
       {
         type: 'Circle',
@@ -58,7 +83,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom1, options);
   }
-  initZr2 = () => {
+  initArc = () => {
     const options = [
       {
         type: 'Arc',
@@ -98,7 +123,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom2, options);
   }
-  initZr3 = () => {
+  initBezierCurve = () => {
     const options = [
       {
         type: 'BezierCurve',
@@ -123,7 +148,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom3, options);
   }
-  initZr4 = () => {
+  initDroplet = () => {
     const options = [
       {
         type: 'Droplet',
@@ -145,7 +170,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom4, options);
   }
-  initZr5 = () => {
+  initEllipse = () => {
     const options = [
       {
         type: 'Ellipse',
@@ -167,7 +192,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom5, options);
   }
-  initZr6 = () => {
+  initHeart = () => {
     const options = [
       {
         type: 'Heart',
@@ -189,7 +214,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom6, options);
   }
-  initZr7 = () => {
+  initImage = () => {
     const options = [
       {
         type: 'Image',
@@ -212,7 +237,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom7, options);
   }
-  initZr8 = () => {
+  initIsogon = () => {
     const options = [
       {
         type: 'Isogon',
@@ -285,7 +310,7 @@ class displayable extends Component {
     ];
     this.initZr(this.refDom8, options);
   }
-  initZr9 = () => {
+  initLine = () => {
     const options = [
       {
         type: 'Line',
@@ -319,14 +344,13 @@ class displayable extends Component {
             fill: 'none',
             stroke,
             text: '线',
-
           }
         }
       }
     ];
     this.initZr(this.refDom9, options);
   }
-  initZr10 = () => {
+  initPolygon = () => {
     const options = [
       {
         type: 'Polygon',
@@ -409,6 +433,166 @@ class displayable extends Component {
       },
     ];
     this.initZr(this.refDom10, options);
+  }
+  initPolyline = () => {
+    const options = [
+      {
+        type: 'Polyline',
+        opts: {
+          shape: {
+            points: [
+              [50, 10],
+              [10, 100],
+              [90, 100]
+            ]
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '三角形',
+          }
+        }
+      },
+      {
+        type: 'Polyline',
+        opts: {
+          shape: {
+            // 要注意顺序，图形是点依次连接得到
+            points: [
+              [100, 100],
+              [190, 100],
+              [190, 10],
+              [100, 10],
+            ]
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '四边形',
+          }
+        }
+      },
+      {
+        type: 'Polyline',
+        opts: {
+          shape: {
+            // 要注意顺序，图形是点依次连接得到
+            points: [
+              [50, 110],
+              [10, 150],
+              [30, 190],
+              [80, 190],
+              [90, 150]
+            ]
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '五边形',
+          }
+        }
+      },
+      {
+        type: 'Polyline',
+        opts: {
+          shape: {
+            // 要注意顺序，图形是点依次连接得到
+            points: [
+              [100, 190],
+              [190, 110],
+              [190, 190],
+              [100, 110],
+            ]
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '',
+          }
+        }
+      },
+    ];
+    this.initZr(this.refDom11, options);
+  }
+  initRect = () => {
+    const options = [
+      {
+        type: 'Rect',
+        opts: {
+          shape: {
+            x: 10,
+            y: 10,
+            width: 80,
+            height: 180,
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '矩形',
+          }
+        },
+      },
+      {
+        type: 'Rect',
+        opts: {
+          shape: {
+            r: [5, 10, 15, 20],
+            x: 105,
+            y: 10,
+            width: 80,
+            height: 180,
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '圆角矩形',
+          }
+        },
+      }
+    ];
+    this.initZr(this.refDom12, options);
+  }
+  initRose = () => {
+    const options = [
+      {
+        type: 'Rose',
+        opts: {
+          shape: {
+            cx: 100,
+            cy: 100,
+            r: [100, 50],
+            k: 1,
+            n: 2
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '谜一样的玫瑰线',
+          }
+        },
+      }
+    ];
+
+    this.initZr(this.refDom13, options);
+  }
+  initSector = () => {
+
+  }
+  initStar = () => {
+
+  }
+  initText = () => {
+
+  }
+  initTrochoid = () => {
+
   }
 
   render() {
