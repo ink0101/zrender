@@ -28,6 +28,9 @@ class Index extends Component {
           <li>
             <Link to="/example/helloWorld">官方示例 - helloWorld</Link>
           </li>
+          <li>
+            <Link to="/example/particles">官方示例 - 粒子动画</Link>
+          </li>
         </ul>
 
         <div>
