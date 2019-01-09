@@ -25,6 +25,9 @@ class Index extends Component {
           <li>
             <Link to="/example/glitchedText">官方示例 - 故障效果文字</Link>
           </li>
+          <li>
+            <Link to="/example/helloWorld">官方示例 - helloWorld</Link>
+          </li>
         </ul>
 
         <div>
