@@ -13,7 +13,7 @@ const style = {
 };
 const stroke = '#999';
 
-const arr = [...Array(20)];
+const arr = [...Array(16)];
 
 class displayable extends Component {
   componentDidMount() {
@@ -49,7 +49,7 @@ class displayable extends Component {
     this.initStar();
     // 文字
     this.initText();
-    // 内外涡轮曲线
+    // 内外旋轮曲线
     this.initTrochoid();
   }
   initZr = (dom, options) => {
@@ -93,7 +93,7 @@ class displayable extends Component {
             cy: 50,
             r: 40,
             // 角度如何计算？
-            startAngle: 180 * Math.PI / 180,
+            startAngle: Math.PI,
             // endAngle: 180,
             // clockwise: false
           },
@@ -111,7 +111,7 @@ class displayable extends Component {
             cx: 150,
             cy: 50,
             r: 40,
-            startAngle: 180 * Math.PI / 180,
+            startAngle: Math.PI,
           },
           style: {
             fill: '#000',
@@ -583,16 +583,99 @@ class displayable extends Component {
     this.initZr(this.refDom13, options);
   }
   initSector = () => {
+    const options = [
+      {
+        type: 'Sector',
+        opts: {
+          shape: {
+            cx: 100,
+            cy: 100,
+            r: 50,
+            // 内半径
+            r0: 20,
+            startAngle: 0,
+            endAngle: Math.PI,
+            // 顺时针
+            clockwise: false,
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '扇形',
+          }
+        },
+      },
+    ];
 
+    this.initZr(this.refDom14, options);
   }
   initStar = () => {
+    const options = [
+      {
+        type: 'Star',
+        opts: {
+          shape: {
+            cx: 100,
+            cy: 100,
+            n: 5,
+            r: 60,
+            r0: 30,
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '星星',
+          },
+        },
+      },
+    ];
 
+    this.initZr(this.refDom15, options);
   }
   initText = () => {
+    const options = [
+      {
+        type: 'Text',
+        opts: {
+          style: {
+            text: '文字',
+            textAlign: 'center',
+            textVerticalAlign: 'middle',
+            textFill: '#f0f',
+          },
+          position: [100, 100],
+        }
+      }
+    ];
 
+    this.initZr(this.refDom15, options);
   }
   initTrochoid = () => {
+    const options = [
+      {
+        type: 'Trochoid',
+        opts: {
+          shape: {
+            cx: 100,
+            cy: 100,
+            r: 50,
+            r0: 10,
+            d: 50,
+            n: 'out',
+          },
+          style: {
+            // fill: '#000',
+            fill: 'none',
+            stroke,
+            text: '内外旋轮曲线',
+          },
+        },
+      },
+    ];
 
+    this.initZr(this.refDom16, options);
   }
 
   render() {
