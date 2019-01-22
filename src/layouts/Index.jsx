@@ -10,6 +10,9 @@ class Index extends Component {
           <li>
             <Link to="/demo/displayable">可显示的元素</Link>
           </li>
+          <li>
+            <Link to="/demo/pattern">纹理图案显示</Link>
+          </li>
         </ul>
 
         <ul>

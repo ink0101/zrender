@@ -65,6 +65,9 @@ class helloWorld extends Component {
     zr.add(sun);
     zr.add(water);
     zr.add(sky);
+
+    // console.log('zr', zr);
+    // console.log(new zrender.Circle());
   }
   render() {
     return (

@@ -15,6 +15,31 @@ export default {
   lessLoaderOptions: {
     javascriptEnabled: true
   },
+
+  // //  不使用 url-loader 的规则
+  // urlLoaderExcludes: [/\.(png|jpe?g|gif|svg)$/],
+  // chainWebpack(config, {
+  //   webpack
+  // }) {
+  //   //  svg 使用 file-loader 引入
+  //   config.module.rule('svg-with-file')
+  //     .test(/.svg$/)
+  //     .use('svg-with-file-loader')
+  //     .loader('file-loader')
+  //     .options({
+  //       name: 'svg/[name]-[hash:8].[ext]'
+  //     });
+
+  //   //  png|jpe?g|gif 使用 file-loader 引入
+  //   config.module.rule('image-file')
+  //     .test(/\.(png|jpe?g|gif)$/)
+  //     .use('file-loader')
+  //     .loader('file-loader')
+  //     .options({
+  //       name: 'images/[name]-[hash:8].[ext]'
+  //     });
+  // },
+
   alias: {
     "assets": path.resolve(__dirname, 'src/assets/')
   },

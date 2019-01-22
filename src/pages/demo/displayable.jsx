@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import zrender from 'zrender';
-// import img from '../assets/1.jpeg';
+import img from '../../assets/1.jpeg';
 
 const style = {
   height: '200px',
@@ -54,6 +54,7 @@ class displayable extends Component {
   }
   initZr = (dom, options) => {
     const zr = zrender.init(dom);
+    // console.log(zr);
 
     for (const item of options) {
       const type = item.type;
@@ -222,15 +223,11 @@ class displayable extends Component {
           shape: {
           },
           style: {
-            // fill: '#000',
-            image: '../assets/1.jpeg',
+            image: img,
             x: 50,
             y: 50,
             width: 100,
             height: 100,
-            // fill: 'none',
-            // stroke,
-            // text: '心形'
           }
         }
       }

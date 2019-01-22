@@ -3,7 +3,11 @@ import zrender from 'zrender';
 
 class particles extends Component {
   componentDidMount() {
+    clearInterval(this.timer);
     this.init();
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
   init = () => {
     const dom = this.refDom;
@@ -76,7 +80,7 @@ class particles extends Component {
     };
 
     spray(width / 2, height / 2);
-    setInterval(() => {
+    this.timer = setInterval(() => {
       spray(width * Math.random(), height * Math.random());
     }, 1000);
   }
